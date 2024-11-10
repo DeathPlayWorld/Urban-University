@@ -22,4 +22,4 @@ if(len(my_string) == 1):
           "'"+my_string[0]+"'")
 if(len(my_string) == 0):
     print("And finally, there is no first and last letter because you type nothing >:( "
-          "(You thought Gregg would miss it!? Gregg is disappointed in you!")
+          "(You thought Gregg was gonna miss it!? Gregg is disappointed in you!")
