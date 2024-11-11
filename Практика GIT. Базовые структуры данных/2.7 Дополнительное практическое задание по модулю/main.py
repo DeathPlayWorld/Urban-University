@@ -18,4 +18,5 @@ _finalDictionary = dict([])
 for i in range(0, len(_listOfStudents)):
     _finalDictionary.update({_listOfStudents[i]:_newGrades[i]})
 
+del _listOfStudents, _sumOfGrades, _newGrades, students, grades, _currentGrades
 print(_finalDictionary)
