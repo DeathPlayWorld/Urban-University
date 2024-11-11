@@ -20,4 +20,4 @@ print("Deleting 'Apple'...")
 print("Before:", my_set)
 my_set.discard("Apple")
 print("After:", my_set)
-
+del my_set
