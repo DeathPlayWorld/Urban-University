@@ -8,7 +8,6 @@ def get_domain(address:str):
     return validating_domain(domain)
 
 def valid_mail(sender, recipient):
-    #print(get_domain(sender), "-", get_domain(recipient))
     if ((get_domain(sender) != ".ru" and get_domain(sender) != ".com" and get_domain(sender) != ".net") or
         (get_domain(recipient) != ".ru" and get_domain(recipient) != ".com" and get_domain(recipient) != ".net") or
         ("@" not in sender or "@" not in recipient)):
