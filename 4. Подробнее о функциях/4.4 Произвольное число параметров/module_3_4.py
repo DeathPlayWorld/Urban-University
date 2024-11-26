@@ -1,12 +1,11 @@
 
 def single_root_words(root_word, *other_words):
     same_words = []
-    comparable_list = [root_word, other_words]
-    for i in range(len(other_words)):
-        if comparable_list[0].lower() in comparable_list[1][i].lower():
-            same_words.append(other_words[i])
-        elif comparable_list[1][i].lower() in comparable_list[0].lower():
-            same_words.append(other_words[i])
+    for name in other_words:
+        if root_word.lower() in name.lower():
+            same_words.append(name)
+        elif name.lower() in root_word.lower():
+            same_words.append(name)
     return same_words
 
 running = True
