@@ -73,9 +73,9 @@ class UrTube:
                     break
                 else: access_to_video = False
                 break
-        if not log_in: print("Please log in first!")
-        elif not found_video: print("There is no video with this title!")
-        elif not access_to_video: print("You have no access to this video!")
+        if not log_in: print("Please log in first!\n")
+        elif not found_video: print("There is no video with this title!\n")
+        elif not access_to_video: print("You have no access to this video!\n")
 
 
 class Video:
