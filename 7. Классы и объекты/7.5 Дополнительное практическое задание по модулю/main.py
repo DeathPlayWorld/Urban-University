@@ -41,9 +41,9 @@ class UrTube:
 
     def get_videos(self, search_word):
         find_videos = []
-        for i in self.videos:
-            if search_word.lower() in str(i).lower() or str(i).lower() in search_word.lower():
-                find_videos.append(i.title)
+        for video in self.videos:
+            if search_word.lower() in str(video).lower() or str(video).lower() in search_word.lower():
+                find_videos.append(video.title)
         if not find_videos: print("There is no video with this title!")
         return find_videos
 
