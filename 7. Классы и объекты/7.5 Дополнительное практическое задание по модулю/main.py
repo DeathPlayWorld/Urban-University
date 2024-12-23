@@ -26,6 +26,7 @@ class UrTube:
             if self.users[i].nickname == nickname:
                 account_exists = True
                 print(f"User {nickname} already exists!")
+                break
         if not account_exists:
             print(f"Creating {nickname} account...")
             self.users.append(User(nickname, password, age))
