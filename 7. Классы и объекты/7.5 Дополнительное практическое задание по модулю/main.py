@@ -13,7 +13,7 @@ class UrTube:
         successful_log_in = False
         for name in self.users:
             if nickname == name.nickname:
-                if hash(password) == hash(name.password):
+                if hash(password) == name.password:
                     self.current_user = name
                     successful_log_in = True
                     print(f"Welcome {str(self.current_user)}!\n")
@@ -76,6 +76,7 @@ class UrTube:
         elif not found_video: print("There is no video with this title!")
         elif not access_to_video: print("You have no access to this video!")
 
+
 class Video:
 
     def __init__(self, title, duration, time_now = 0, adult_mode = False):
@@ -93,7 +94,7 @@ class Video:
 class User:
     def __init__(self, nickname, password,  age):
         self.nickname = nickname
-        self.password = password
+        self.password = hash(password)
         self.age = age
 
     def __str__(self):
