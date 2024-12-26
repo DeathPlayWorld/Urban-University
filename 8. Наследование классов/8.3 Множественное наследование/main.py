@@ -28,18 +28,27 @@ class Animal:
 class Bird(Animal):
     beak = True
 
+    def __init__(self, speed): super().__init__(speed)
+
     def lay_eggs(self): print(f"Here is(are) {randint(1, 4)} egg(s) for you!")
 
 class AquaticAnimal(Animal):
     _DEGREE_OF_DANGER = 3
 
+    def __init__(self, speed): super().__init__(speed)
+
     def dive_in(self, dz):
         if dz >= 0: self._cords[2] += -abs(dz * int((self.speed/2)))
 
-class PoisonousAnimal(Animal): _DEGREE_OF_DANGER = 8
+class PoisonousAnimal(Animal):
+    _DEGREE_OF_DANGER = 8
+
+    def __init__(self, speed): super().__init__(speed)
 
 class Duckbill(Bird, PoisonousAnimal, AquaticAnimal):
     sound = "Click-click-click"
+
+    def __init__(self, speed): super().__init__(speed)
 
 db = Duckbill(10)
 
